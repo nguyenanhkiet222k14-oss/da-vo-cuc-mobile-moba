@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#050b1a" />
+    <title>Dạ Vô Cực — Mobile MOBA Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="game-shell">
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="hud">
+        <div id="topBar">
+          <div class="brand">DẠ VÔ CỰC</div>
+          <div id="formName">Thần — Thiên Kiếm Vô Khuyết</div>
+          <div id="objective">Mục tiêu: tiêu diệt toàn bộ kẻ địch</div>
+        </div>
+
+        <div id="statusText">Đang chiến đấu...</div>
+
+        <div class="bars">
+          <div class="bar">
+            <label>Máu</label>
+            <div class="bar-track">
+              <div id="healthFill" class="bar-fill health"></div>
+            </div>
+          </div>
+
+          <div class="bar">
+            <label>Mana</label>
+            <div class="bar-track">
+              <div id="manaFill" class="bar-fill mana"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="touchControls">
+        <div id="joystick">
+          <div id="joystickBase">
+            <div id="joystickKnob"></div>
+          </div>
+        </div>
+
+        <div id="actionButtons">
+          <button id="attackBtn" class="primary">Tấn công</button>
+          <button id="skill1Btn">Kỹ năng 1</button>
+          <button id="skill2Btn">Kỹ năng 2</button>
+          <button id="ultBtn" class="ultimate">Ultimate</button>
+        </div>
+
+        <div id="formButtons">
+          <button data-form="thien" class="active">Thần</button>
+          <button data-form="ma">Ma</button>
+          <button data-form="song">Song Mệnh</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/game.js"></script>
+  </body>
+</html>
